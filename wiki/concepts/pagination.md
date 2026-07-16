@@ -44,7 +44,7 @@ SELECT COUNT(*) FROM board;
     FROM board
     WHERE 1=1
     <if test="keyword != null and keyword != ''">
-        AND title LIKE CONCAT("%", #{keyword}, "%")
+        AND title LIKE CONCAT('%', #{keyword}, '%')
     </if>
     ORDER BY reg_date DESC
     LIMIT #{pageSize} OFFSET #{offset}
@@ -56,7 +56,7 @@ SELECT COUNT(*) FROM board;
     FROM board
     WHERE 1=1
     <if test="keyword != null and keyword != ''">
-        AND title LIKE CONCAT("%", #{keyword}, "%")
+        AND title LIKE CONCAT('%', #{keyword}, '%')
     </if>
 </select>
 ```

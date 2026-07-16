@@ -23,7 +23,7 @@ related: ["[[mybatis-resultmap]]", "[[mybatis-xml-escape]]", "[[pagination]]"]
     FROM board
     WHERE 1=1
     <if test="keyword != null and keyword != ''">
-        AND title LIKE CONCAT("%", #{keyword}, "%")
+        AND title LIKE CONCAT('%', #{keyword}, '%')
     </if>
     <if test="writer != null and writer != ''">
         AND writer = #{writer}
@@ -71,7 +71,7 @@ related: ["[[mybatis-resultmap]]", "[[mybatis-xml-escape]]", "[[pagination]]"]
     SELECT board_id, title, writer
     FROM board
     <where>
-        <if test="keyword != null and keyword != ''">AND title LIKE CONCAT("%", #{keyword}, "%")</if>
+        <if test="keyword != null and keyword != ''">AND title LIKE CONCAT('%', #{keyword}, '%')</if>
         <if test="writer != null and writer != ''">AND writer = #{writer}</if>
     </where>
 </select>

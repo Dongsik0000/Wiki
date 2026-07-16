@@ -53,7 +53,7 @@ for (String key : param.keySet()) {
     FROM board
     WHERE 1=1
     <if test="keyword != null and keyword != ''">
-        AND title LIKE CONCAT("%", #{keyword}, "%")
+        AND title LIKE CONCAT('%', #{keyword}, '%')
     </if>
     ORDER BY reg_date DESC
     LIMIT #{size} OFFSET #{offset}

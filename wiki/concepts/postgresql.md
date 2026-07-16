@@ -49,7 +49,7 @@ SQL 문법은 MySQL과 대부분 비슷하지만, 컬럼명 대소문자, 시퀀
 
 <insert id="insertBoard" parameterType="BoardVO">
     INSERT INTO board (board_id, title, content, writer, reg_date)
-    VALUES (nextval(board_seq), #{title}, #{content}, #{writer}, NOW())
+    VALUES (nextval('board_seq'), #{title}, #{content}, #{writer}, NOW())
 </insert>
 ```
 
@@ -69,14 +69,15 @@ CREATE TABLE board (
 
 ```sql
 -- 문자열 연결
-SELECT concat_ws(" ", "Hello", "World");
+SELECT 'Hello' || ' ' || 'World';   -- 'Hello World'
+SELECT concat_ws(' ', 'Hello', 'World');  -- concat_ws(구분자, 값1, 값2...)
 
 -- 현재 시간
 NOW()
 CURRENT_DATE
 
 -- 대소문자 구분 없이 검색 (LIKE의 PostgreSQL 버전)
-WHERE title ILIKE CONCAT("%", #{keyword}, "%")
+WHERE title ILIKE CONCAT('%', #{keyword}, '%')
 
 -- 통계 함수
 COUNT(*), SUM(amount), AVG(score), MAX(price), MIN(price)
