@@ -5,6 +5,7 @@
 ## 프로젝트
 
 - [[projects/llm-wiki|LLM Wiki]] — 이 위키 프로젝트 자체의 진행 기록 (2026-07-16)
+- [[projects/goyangfms|goyangFms]] — 고양시 자율주행 관제 시스템, eGovFramework+MyBatis+PostgreSQL (2026-07-16)
 
 ## 개념
 

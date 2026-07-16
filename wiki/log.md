@@ -24,3 +24,11 @@ heredoc 작성 중 bash 홑따옴표 충돌을 피하려고 SQL 예제의 문자
 mybatis-dynamic-sql.md, pagination.md, postgresql.md의 CONCAT(...),
 nextval(...), 문자열 연결 예제 총 8곳을 홑따옴표로 수정. 나머지 46개
 페이지는 기술 내용 검토 결과 특이사항 없음.
+
+## [2026-07-16] ingest | goyangFms 프로젝트 첫 페이지 생성
+
+`C:\dev\workspace\goyangFms` 코드베이스(pom.xml, 패키지 구조, 최근 수정
+파일)를 훑어보고 wiki/projects/goyangfms.md 생성. eGovFramework+Spring
+MVC+MyBatis+PostgreSQL+Spring Security+JSTL/JSP, SVN 버전관리. 처음에
+차량/탑승 관리로 추정했으나 사용자가 "고양시 자율주행 관제 시스템"으로
+정정. wiki/index.md 프로젝트 섹션에 링크 추가.
